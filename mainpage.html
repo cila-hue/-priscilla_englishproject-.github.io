@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English Learning Interactive</title>
+<style>
+  body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: #eaf4fc;
+    color: #333;
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+  }
+  header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  nav {
+    background: #2980b9;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+  }
+ nav {
+  background: #2980b9;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;   /* Horizontal center */
+  align-items: center;       /* Vertical center */
+  gap: 40px;                 /* Jarak antar menu, bisa diubah */
+  min-height: 50px;          /* Tinggi minimum agar lebih simetris */
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2em;
+  padding: 0 10px;
+  transition: background 0.2s, color 0.2s;
+  border-radius: 4px;
+  display: inline-block;
+  line-height: 1.5;
+  text-align: center;
+}
+
+nav a:hover {
+  background: #2471a3;
+  color: #fff;
+}
+
+  section {
+    background: white;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  h2 {
+    color: #2c3e50;
+  }
+  ul {
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+  button {
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  button:hover {
+    background-color: #3498db;
+  }
+  .result {
+    font-weight: bold;
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    background: #f5f5f5;
+    display: inline-block;
+  }
+  .quote {
+    text-align: center;
+    font-style: italic;
+    color: #2980b9;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+  }
+  details summary {
+    cursor: pointer;
+    color: #2980b9;
+    margin-bottom: 5px;
+  }
+  details pre {
+    font-size: 1em;
+    margin: 0;
+    white-space: pre-wrap;
+  }
+  @media (max-width: 600px) {
+    nav a {
+      display: block;
+      margin: 10px 0;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Learn English Interactively</h1>
+  <p>Improve your English skills with lessons and quizzes!</p>
+</header>
+ 
+<div class="quote" id="quoteBox"></div>
+
+<nav>
+  <a href="#lesson1" onclick="showSection('lesson1')">Grammar: Present Simple   </a>
+  <a href="#lesson2" onclick="showSection('lesson2')">Adverbs of Time</a>
+  <a href="#listening" onclick="showSection('listening')">Listening</a>
+  <a href="#quiz" onclick="showSection('quiz')">Quiz</a>
+</nav>
+
+<!-- Lessons -->
+<section id="lesson1" class="content-section">
+  <h2>Present Simple Tense</h2>
+  <p>The simple present tense is one of several forms of present tense in English. It is used to describe habits, unchanging situations, general truths, and fixed arrangements. The simple present tense is simple to form. Just use the base form of the verb: (I take, you take, we take, they take) The 3rd person singular takes an -s at the end. (he takes, she takes)</p>
+  <p>Example :</p>
+  <ul>
+    <li>I <strong>eat</strong> breakfast every morning.</li>
+    <li>She <strong>works</strong> at a bank.</li>
+    <li>Water <strong>boils</strong> at 100°C.</li>
+  </ul>
+</section>
+
+<section id="lesson2" class="content-section" style="display:none;">
+  <h2>Adverbs of time</h2>
+  <p>
+   Adverbs of time are words or phrases that tell you when an action happens. In the simple present tense, they are commonly used to indicate that an action is a habit, routine, or general truth. Examples include "always," "usually," "often," "sometimes," "every day," "every morning," and "on Mondays.
+</p>
+</section>
+
+<!-- Listening Section British Council, per soal Next -->
+<section id="listening" class="content-section" style="display:none;">
+  <h2>Listening Practice: A Request from Your Boss</h2>
+  <p>Listen to the conversation and answer the questions below.</p>
+  <audio controls>
+    <source src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/6c/8e/4c/6c8e4c9c-9f3d-5e2a-4e6d-2b7d9b7e6d7b/mzaf_17273935340125356795.plus.aac.p.m4a" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+  <details style="margin-top:10px;">
+    <summary><b>Show Transcript</b></summary>
+    <pre style="background:#f8f8f8;padding:10px;border-radius:5px;">
+Susanne: Hi, Mario. Can you help me prepare some things for the next month?
+Mario: OK, sure. What can I help you with?
+Susanne: I need to visit the customer in Germany. It's important.
+Mario: What can I do to help?
+Susanne: Can you send an email to the customer? Ask them when I can visit them next week. Please do this first. It's a priority and very urgent.
+Mario: Right. I'll do it today.
+Susanne: Thanks. This next task is also important. Can you invite everyone to the next team meeting?
+Mario: Yes, I will.
+Susanne: But first you need to book a meeting room. After that, please send everyone an email about it.
+Mario: Yes, of course.
+Susanne: And finally, can you write a short report about our new project? I have to give a presentation to our managers next month. Please do it when you have time – sometime in the next two or three weeks. It's not too urgent.
+Mario: Sure, no problem. I can do it this week.
+Susanne: There's no hurry. Take your time.
+    </pre>
+  </details>
+  <form id="listeningForm" style="margin-top:15px;">
+    <div id="listening-questions"></div>
+    <button type="button" id="nextListeningBtn" onclick="nextListeningPage()">Next</button>
+    <button type="button" id="submitListeningBtn" onclick="submitListening()" style="display:none;">Submit</button>
+  </form>
+  <div id="listeningResult" class="result"></div>
+</section>
+
+<!-- Quiz Section: 3 soal per halaman, Next & Submit -->
+<section id="quiz" class="content-section" style="display:none;">
+  <h2>Quiz: Test Your Knowledge</h2>
+  <form id="quizForm">
+    <div id="quiz-questions"></div>
+    <button type="button" id="nextBtn" onclick="nextQuizPage()">Next</button>
+    <button type="button" id="submitBtn" onclick="submitQuiz()" style="display:none;">Submit</button>
+  </form>
+  <div id="result" class="result"></div>
+</section>
+
+<script>
+  // Motivational Quotes
+  const quotes = [
+    "Learning a new language is like becoming a new person. – Haruki Murakami",
+    "The limits of my language mean the limits of my world. – Ludwig Wittgenstein",
+    "Practice makes perfect. Don’t give up!",
+    "Mistakes are proof that you are trying.",
+    "The more you practice, the better you get."
+  ];
+  function showRandomQuote() {
+    const quoteBox = document.getElementById('quoteBox');
+    const randomIndex = Math.floor(Math.random() * quotes.length);
+    quoteBox.textContent = quotes[randomIndex];
+  }
+  showRandomQuote();
+
+  // Section navigation
+  function showSection(id) {
+    const sections = document.querySelectorAll('.content-section');
+    sections.forEach(section => {
+      section.style.display = section.id === id ? 'block' : 'none';
+    });
+    // Reset quiz jika keluar dari quiz
+    if(id !== 'quiz') {
+      document.getElementById('result').textContent = '';
+      quizPage = 0;
+      quizUserAnswers = {};
+    }
+    if(id !== 'listening') {
+      document.getElementById('listeningResult').textContent = '';
+      listeningPage = 0;
+      listeningUserAnswers = {};
+    }
+    // Render halaman pertama quiz jika masuk ke quiz
+    if(id === 'quiz') {
+      quizPage = 0;
+      renderQuizPage();
+    }
+    // Render halaman pertama listening jika masuk ke listening
+    if(id === 'listening') {
+      listeningPage = 0;
+      renderListeningPage();
+    }
+  }
+
+  // Quiz data & logic
+  const quizData = [
+    {
+      q: "1. He ____ to school every day.",
+      name: "q1",
+      options: [
+        {v: "go", t: "go"},
+        {v: "goes", t: "goes"},
+        {v: "going", t: "going"}
+      ]
+    },
+    {
+      q: "2. They ____ football on Sundays.",
+      name: "q2",
+      options: [
+        {v: "play", t: "play"},
+        {v: "plays", t: "plays"},
+        {v: "playing", t: "playing"}
+      ]
+    },
+    {
+      q: '3. Choose the correct word: "I have a ____ to travel next month."',
+      name: "q3",
+      options: [
+        {v: "passport", t: "passport"},
+        {v: "reservation", t: "reservation"},
+        {v: "luggage", t: "luggage"}
+      ]
+    },
+    {
+      q: '4. What is the past tense of "go"?',
+      name: "q4",
+      options: [
+        {v: "goed", t: "goed"},
+        {v: "went", t: "went"},
+        {v: "gone", t: "gone"}
+      ]
+    },
+    {
+      q: "5. Select the correct sentence.",
+      name: "q5",
+      options: [
+        {v: "He don't like apples.", t: "He don't like apples."},
+        {v: "He doesn't like apples.", t: "He doesn't like apples."},
+        {v: "He not like apples.", t: "He not like apples."}
+      ]
+    },
+    {
+      q: '6. What is the plural form of "child"?',
+      name: "q6",
+      options: [
+        {v: "childs", t: "childs"},
+        {v: "children", t: "children"},
+        {v: "childes", t: "childes"}
+      ]
+    },
+    {
+      q: '7. Fill in the blank: "She ____ a book now."',
+      name: "q7",
+      options: [
+        {v: "read", t: "read"},
+        {v: "reads", t: "reads"},
+        {v: "is reading", t: "is reading"}
+      ]
+    },
+    {
+      q: '8. Choose the correct preposition: "I am interested ____ music."',
+      name: "q8",
+      options: [
+        {v: "on", t: "on"},
+        {v: "in", t: "in"},
+        {v: "at", t: "at"}
+      ]
+    },
+    {
+      q: '9. What is the superlative form of "good"?',
+      name: "q9",
+      options: [
+        {v: "goodest", t: "goodest"},
+        {v: "better", t: "better"},
+        {v: "best", t: "best"}
+      ]
+    },
+    {
+      q: '10. Complete the sentence: "They ____ been to Paris."',
+      name: "q10",
+      options: [
+        {v: "has", t: "has"},
+        {v: "have", t: "have"},
+        {v: "is", t: "is"}
+      ]
+    }
+  ];
+
+  const quizAnswers = {
+    q1: "goes",
+    q2: "play",
+    q3: "reservation",
+    q4: "went",
+    q5: "He doesn't like apples.",
+    q6: "children",
+    q7: "is reading",
+    q8: "in",
+    q9: "best",
+    q10: "have"
+  };
+
+  let quizPage = 0; // 0: soal 1-3, 1: soal 4-6, 2: soal 7-9, 3: soal 10
+  const pageSize = 3;
+  let quizUserAnswers = {};
+
+  function renderQuizPage() {
+    const start = quizPage * pageSize;
+    const end = Math.min(start + pageSize, quizData.length);
+    const quizDiv = document.getElementById("quiz-questions");
+    quizDiv.innerHTML = "";
+    for (let i = start; i < end; i++) {
+      const q = quizData[i];
+      let html = `<p>${q.q}</p>`;
+      q.options.forEach(opt => {
+        const checked = (quizUserAnswers[q.name] === opt.v) ? "checked" : "";
+        html += `<input type="radio" name="${q.name}" value="${opt.v}" ${checked} onchange="saveQuizAnswer('${q.name}', this.value)"> ${opt.t}<br>`;
+      });
+      quizDiv.innerHTML += html;
+    }
+    document.getElementById("result").innerHTML = "";
+    if (end === quizData.length) {
+      document.getElementById("nextBtn").style.display = "none";
+      document.getElementById("submitBtn").style.display = "inline-block";
+    } else {
+      document.getElementById("nextBtn").style.display = "inline-block";
+      document.getElementById("submitBtn").style.display = "none";
+    }
+  }
+
+  function saveQuizAnswer(qname, value) {
+    quizUserAnswers[qname] = value;
+  }
+
+  function nextQuizPage() {
+    // Validasi: semua soal di halaman ini harus dijawab
+    const start = quizPage * pageSize;
+    const end = Math.min(start + pageSize, quizData.length);
+    for (let i = start; i < end; i++) {
+      if (!quizUserAnswers[quizData[i].name]) {
+        document.getElementById("result").style.color = "#e74c3c";
+        document.getElementById("result").innerHTML = "⚠️ Please answer all questions on this page before continuing.";
+        return;
+      }
+    }
+    quizPage++;
+    renderQuizPage();
+  }
+
+  function submitQuiz() {
+    // Validasi terakhir (soal terakhir)
+    const start = quizPage * pageSize;
+    const end = Math.min(start + pageSize, quizData.length);
+    for (let i = start; i < end; i++) {
+      if (!quizUserAnswers[quizData[i].name]) {
+        document.getElementById("result").style.color = "#e74c3c";
+        document.getElementById("result").innerHTML = "⚠️ Please answer all questions on this page before submitting.";
+        return;
+      }
+    }
+    // Hitung skor
+    let score = 0;
+    let total = quizData.length;
+    for (let i = 0; i < quizData.length; i++) {
+      const qname = quizData[i].name;
+      if (quizUserAnswers[qname] === quizAnswers[qname]) score++;
+    }
+    let feedback = '';
+    if(score === total) {
+      feedback = `🎉 Excellent! You scored ${score} out of ${total}. Perfect score!`;
+      document.getElementById("result").style.color = "#27ae60";
+    } else if(score >= total * 0.7) {
+      feedback = `👍 Good job! You scored ${score} out of ${total}. Keep practicing to improve more!`;
+      document.getElementById("result").style.color = "#f39c12";
+    } else if(score >= total * 0.4) {
+      feedback = `🙂 You scored ${score} out of ${total}. Keep studying and try again!`;
+      document.getElementById("result").style.color = "#d35400";
+    } else {
+      feedback = `😞 You scored ${score} out of ${total}. Don't give up, keep practicing!`;
+      document.getElementById("result").style.color = "#e74c3c";
+    }
+    document.getElementById("quiz-questions").innerHTML = "";
+    document.getElementById("nextBtn").style.display = "none";
+    document.getElementById("submitBtn").style.display = "none";
+    document.getElementById("result").innerHTML = feedback;
+  }
+
+  // Listening per soal, Next & Submit
+  const listeningData = [
+    {
+      q: "1. What is the first urgent task Susanne asks Mario to do?",
+      name: "l1",
+      options: [
+        {v: "send_email", t: "Send an email to the customer"},
+        {v: "invite_team", t: "Invite everyone to the next team meeting"},
+        {v: "write_report", t: "Write a report about the new project"}
+      ]
+    },
+    {
+      q: "2. What must Mario do before inviting people to the meeting?",
+      name: "l2",
+      options: [
+        {v: "send_email", t: "Send an email to the customer"},
+        {v: "book_room", t: "Book a meeting room"},
+        {v: "write_report", t: "Write a report"}
+      ]
+    },
+    {
+      q: "3. When does Susanne need the report about the new project?",
+      name: "l3",
+      options: [
+        {v: "today", t: "Today"},
+        {v: "next_week", t: "Next week"},
+        {v: "next_2_3_weeks", t: "In the next two or three weeks"}
+      ]
+    }
+  ];
+  const listeningAnswers = {
+    l1: "send_email",
+    l2: "book_room",
+    l3: "next_2_3_weeks"
+  };
+  let listeningPage = 0;
+  let listeningUserAnswers = {};
+
+  function renderListeningPage() {
+    const listeningDiv = document.getElementById("listening-questions");
+    listeningDiv.innerHTML = "";
+    const q = listeningData[listeningPage];
+    let html = `<p>${q.q}</p>`;
+    q.options.forEach(opt => {
+      const checked = (listeningUserAnswers[q.name] === opt.v) ? "checked" : "";
+      html += `<input type="radio" name="${q.name}" value="${opt.v}" ${checked} onchange="saveListeningAnswer('${q.name}', this.value)"> ${opt.t}<br>`;
+    });
+    listeningDiv.innerHTML = html;
+    document.getElementById("listeningResult").innerHTML = "";
+    if (listeningPage === listeningData.length - 1) {
+      document.getElementById("nextListeningBtn").style.display = "none";
+      document.getElementById("submitListeningBtn").style.display = "inline-block";
+    } else {
+      document.getElementById("nextListeningBtn").style.display = "inline-block";
+      document.getElementById("submitListeningBtn").style.display = "none";
+    }
+  }
+
+  function saveListeningAnswer(qname, value) {
+    listeningUserAnswers[qname] = value;
+  }
+
+  function nextListeningPage() {
+    // Validasi: soal harus dijawab
+    const q = listeningData[listeningPage];
+    if (!listeningUserAnswers[q.name]) {
+      document.getElementById("listeningResult").style.color = "#e74c3c";
+      document.getElementById("listeningResult").innerHTML = "⚠️ Please answer this question before continuing.";
+      return;
+    }
+    listeningPage++;
+    renderListeningPage();
+  }
+
+  function submitListening() {
+    // Validasi terakhir
+    const q = listeningData[listeningPage];
+    if (!listeningUserAnswers[q.name]) {
+      document.getElementById("listeningResult").style.color = "#e74c3c";
+      document.getElementById("listeningResult").innerHTML = "⚠️ Please answer this question before submitting.";
+      return;
+    }
+    // Hitung skor
+    let score = 0;
+    let total = listeningData.length;
+    for (let i = 0; i < listeningData.length; i++) {
+      const qname = listeningData[i].name;
+      if (listeningUserAnswers[qname] === listeningAnswers[qname]) score++;
+    }
+    let feedback = '';
+    if(score === total) {
+      feedback = "🎉 <span style='color:#27ae60'>Excellent!</span> You answered all questions correctly.";
+    } else if(score >= total / 2) {
+      feedback = `👍 <span style='color:#f39c12'>Good job!</span> You got ${score} out of ${total}.`;
+    } else {
+      feedback = `😅 <span style='color:#e74c3c'>Keep practicing!</span> You got ${score} out of ${total}.`;
+    }
+    document.getElementById("listening-questions").innerHTML = "";
+    document.getElementById("nextListeningBtn").style.display = "none";
+    document.getElementById("submitListeningBtn").style.display = "none";
+    document.getElementById("listeningResult").innerHTML = feedback;
+  }
+</script>
+
+</body>
+</html>
